@@ -1,37 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Inicio</title>
-  
-  <style>
-    body {
-      background-image: url('monitor_crt.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    
-    .animation-container {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: #fff;
-      text-align: center;
-      font-size: 36px;
-      font-weight: bold;
-    }
-  </style>
+  <title>Tienda de películas</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
-  <div class="animation-container">
-    <h1>Bienvenido a la Página de Inicio</h1>
-    <p>Texto de animación</p>
-  </div>
+  <header>
+    
+    <nav class="navbar">
+      <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
+      <ul id="navbarMenu" class="navbar-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Pastilla roja</a></li>
+        <li><a href="#">Pastilla azul</a></li>
+      </ul>
+    </nav>
+    <h1>Tienda de películas</h1>
+  </header>
 
- 
+  <main>
+    <section id="movies">
+      <div class="container">
+        <div class="movies-container">
+          <div class="movie">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/m8e-FF8MsqU" frameborder="0" allowfullscreen></iframe>
+            <h2>Matrix</h2>
+            <p>Precio: 29.99€</p>
+            <button class="buy-button" data-title="Matrix" data-price="29.99">Añadir al carrito</button>
+          </div>
+
+          <div class="movie">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kYzz0FSgpSU" frameborder="0" allowfullscreen></iframe>
+            <h2>Matrix Reloaded</h2>
+            <p>Precio: 34.99€</p>
+            <button class="buy-button" data-title="Matrix Reloaded" data-price="34.99">Añadir al carrito</button>
+          </div>
+
+          <div class="movie">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hMbexEPAOQI" frameborder="0" allowfullscreen></iframe>
+            <h2>Matrix Revolutions</h2>
+            <p>Precio: 45.99€</p>
+            <button class="buy-button" data-title="Matrix Revolutions" data-price="45.99">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Carrito de compra</h2>
+      <div id="cart-items"></div>
+      <div id="total-price"></div>
+    </section>
+  </main>
+
+  <script src="js.js"></script>
 </body>
 </html>

@@ -1,5 +1,107 @@
 body {
-    background-image: url(neogif.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
+  font-family: 'Ubuntu Light', sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  background-color: gray;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between; /* Cambio de alineación */
+  align-items: center;
+  color: white;
+  order: 1; /* Cambio de orden */
+}
+
+.navbar-toggle {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Alineación del texto en línea hacia la derecha */
+}
+
+.navbar-menu li {
+  margin-right: 20px;
+}
+
+.navbar-menu li a {
+  text-decoration: none; /* Quita la decoración de la fuente */
+  color: white;
+}
+
+.movies-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  flex: 0 0 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.movie iframe {
+  width: 100%;
+  height: 200px;
+}
+
+.buy-button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row-reverse; /* Inversión de dirección */
+    justify-content: flex-end; /* Alineación del texto hacia la derecha */
+    align-items: center;
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin-left: 10px; /* Ajuste de margen */
+  }
+
+  .navbar-menu {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }

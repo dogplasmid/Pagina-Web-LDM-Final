@@ -1,30 +1,57 @@
-// JavaScript para el menú desplegable en pantallas pequeñas
-function toggleMenu() {
-    const menu = document.querySelector('.navbar-menu');
-    menu.classList.toggle('active');
-  }
-  
-  // JavaScript para el efecto de blur al pasar el cursor sobre los divs
-  window.addEventListener('DOMContentLoaded', function () {
-    const leftSection = document.querySelector('.left-section');
-    const rightSection = document.querySelector('.right-section');
-  
-    function applyBlur(event) {
-      const target = event.currentTarget;
-      const opposite = target === leftSection ? rightSection : leftSection;
-      opposite.style.filter = 'blur(2px)';
+var elementosCarrito = [];
+
+var botonesCompra = document.querySelectorAll('.buy-button');
+
+botonesCompra.forEach(function(boton) {
+  boton.addEventListener('click', function() {
+    var tituloPelicula = this.getAttribute('data-title');
+    var precioPelicula = parseFloat(this.getAttribute('data-price'));
+
+    var peliculaEnCarrito = elementosCarrito.find(function(item) {
+      return item.titulo === tituloPelicula;
+    });
+
+    if (peliculaEnCarrito) {
+      var indice = elementosCarrito.indexOf(peliculaEnCarrito);
+      elementosCarrito.splice(indice, 1);
+      this.textContent = 'Añadir al carrito';
+    } else {
+      var item = {
+        titulo: tituloPelicula,
+        precio: precioPelicula
+      };
+      elementosCarrito.push(item);
+      this.textContent = 'Quitar del carrito';
     }
-  
-    function removeBlur(event) {
-      const target = event.currentTarget;
-      const opposite = target === leftSection ? rightSection : leftSection;
-      opposite.style.filter = 'none';
-    }
-  
-    // Aplicar el efecto de blur al pasar el cursor sobre los divs
-    leftSection.addEventListener('mouseenter', applyBlur);
-    leftSection.addEventListener('mouseleave', removeBlur);
-    rightSection.addEventListener('mouseenter', applyBlur);
-    rightSection.addEventListener('mouseleave', removeBlur);
+
+    actualizarCarrito();
   });
-  
+});
+
+function actualizarCarrito() {
+  var elementosCarritoElemento = document.getElementById('cart-items');
+  var precioTotalElemento = document.getElementById('total-price');
+  var precioTotal = 0;
+
+  elementosCarritoElemento.innerHTML = '';
+
+  elementosCarrito.forEach(function(item) {
+    var li = document.createElement('li');
+    li.textContent = item.titulo + ' - ' + item.precio.toFixed(2) + '€';
+    elementosCarritoElemento.appendChild(li);
+    precioTotal += item.precio;
+  });
+
+  if (elementosCarrito.length === 3) {
+    var descuento = precioTotal * 0.23;
+    precioTotal -= descuento;
+    precioTotalElemento.textContent = 'Precio total (con descuento del 23%): ' + precioTotal.toFixed(2) + '€';
+  } else {
+    precioTotalElemento.textContent = 'Precio total: ' + precioTotal.toFixed(2) + '€';
+  }
+}
+
+function toggleMenu() {
+  var navbarMenu = document.getElementById('navbarMenu');
+  navbarMenu.classList.toggle('active');
+}
