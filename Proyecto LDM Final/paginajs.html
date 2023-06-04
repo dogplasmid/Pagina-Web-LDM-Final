@@ -6,17 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de películas</title>
   <link rel="stylesheet" type="text/css" href="css.css">
+  <link href="Ubuntu_Light/Ubuntu-Light.ttf" rel="stylesheet">
 </head>
 <body>
   <header>
-    
-    <nav class="navbar">
-      <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
-      <ul id="navbarMenu" class="navbar-menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="#">Pastilla roja</a></li>
-        <li><a href="#">Pastilla azul</a></li>
-      </ul>
+    <nav>
+      <div class="navbar">
+        <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul id="navbarMenu" class="navbar-menu">
+          <li><a href="index.html"><span class="small-screen-menu">🐇</span><span class="large-screen-menu">Sígueme</span></a></li>
+
+          <li><a href="bluepill.html"><span class="small-screen-menu">🔵</span><span class="large-screen-menu">Pastilla Azul</span></a></li>
+          <li><a href="legal.html"><span class="small-screen-menu">🕳️</span><span class="large-screen-menu">Duerme...</span></a></li>
+        </ul>
+      </div>
     </nav>
     <h1>Tienda de películas</h1>
   </header>
@@ -29,7 +32,7 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/m8e-FF8MsqU" frameborder="0" allowfullscreen></iframe>
             <h2>Matrix</h2>
             <p>Precio: 29.99€</p>
-            <button class="buy-button" data-title="Matrix" data-price="29.99">Añadir al carrito</button>
+            <button class="buy-button" data-title="The Matrix" data-price="29.99">Añadir al carrito</button>
           </div>
 
           <div class="movie">
@@ -50,12 +53,21 @@
     </section>
 
     <section id="cart">
+      <h3>!!23% de descuento si compras las 3 películas!!</h3>
       <h2>Carrito de compra</h2>
-      <div id="cart-items"></div>
+      <div id="cart-items"></div><br>
       <div id="total-price"></div>
     </section>
   </main>
 
   <script src="js.js"></script>
+  <footer>
+    <div class="navbar">
+      <div class="footer-content">
+        <p>Realizado por: Javier Martínez Martínez en 2023</p>
+        <p><a href="legal.html">Legal</a></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
