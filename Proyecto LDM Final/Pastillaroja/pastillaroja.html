@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de películas</title>
+  <link rel="stylesheet" type="text/css" href="pastillaroja.css">
+  <link href="Ubuntu_Light/Ubuntu-Light.ttf" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="navbar">
+        <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul id="navbarMenu" class="navbar-menu">
+          <li><a href="/index.html"><span class="small-screen-menu">🐇</span><span class="large-screen-menu">Sígueme</span></a></li>
+
+          <li><a href="/Pastillaazul/pastillaazul.html"><span class="small-screen-menu">🔵</span><span class="large-screen-menu">Pastilla Azul</span></a></li>
+          <li><a href="/Legal/legal.html"><span class="small-screen-menu">🕳️</span><span class="large-screen-menu">Duerme...</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Tienda de películas</h1>
+  </header>
+
+  <main>
+    <section id="movies">
+      <div class="container">
+        <div class="movies-container">
+          <div class="movie">
+            <iframe width="500" height="300" src="https://www.youtube.com/embed/m8e-FF8MsqU" frameborder="0" allowfullscreen></iframe>
+            <h2>Matrix</h2>
+            <p>Precio: 29.99€</p>
+            <button class="buy-button" data-title="The Matrix" data-price="29.99">Añadir al carrito</button>
+          </div>
+
+          <div class="movie">
+            <iframe width="500" height="300" src="https://www.youtube.com/embed/kYzz0FSgpSU" frameborder="0" allowfullscreen></iframe>
+            <h2>Matrix Reloaded</h2>
+            <p>Precio: 34.99€</p>
+            <button class="buy-button" data-title="Matrix Reloaded" data-price="34.99">Añadir al carrito</button>
+          </div>
+
+          <div class="movie">
+            <iframe width="500" height="300" src="https://www.youtube.com/embed/hMbexEPAOQI" frameborder="0" allowfullscreen></iframe>
+            <h2>Matrix Revolutions</h2>
+            <p>Precio: 45.99€</p>
+            <button class="buy-button" data-title="Matrix Revolutions" data-price="45.99">Añadir al carrito</button>
+           
+            
+          </div>
+</div>
+</div>
+      
+    </section>
+  </main>
+<div class="carro">
+<h3>!!23% de descuento si compras las 3 películas!!</h3>
+<h2>Cesta de la compra</h2>
+<div id="cart-items"></div>
+<div id="total-price"></div>
+</div>
+  <script src="pastillaroja.js"></script>
+  <footer>
+    <div class="navbar">
+      <div class="footer-content">
+        <p>Realizado por: Javier Martínez Martínez en 2023</p>
+        <p><a href="/Legal/legal.html">Legal</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

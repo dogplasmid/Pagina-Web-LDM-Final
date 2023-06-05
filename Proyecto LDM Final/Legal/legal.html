@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="legal.css">
+  <link href="Ubuntu_Light/Ubuntu-Light.ttf" rel="stylesheet">
+  <script src="legal.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="navbar">
+        <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul id="navbarMenu" class="navbar-menu">
+          <li><a href="/index.html"><span class="small-screen-menu">🐇</span><span class="large-screen-menu">Sígueme</span></a></li>
+          <li><a href="/Pastillaroja/pastillaroja.html"><span class="small-screen-menu">🔴</span><span class="large-screen-menu">Pastilla Roja</span></a></li>
+          <li><a href="/Pastillaazul/pastillaazul.html"><span class="small-screen-menu">🔵</span><span class="large-screen-menu">Pastilla Azul</span></a></li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div id="container" class="container">
+    <h1>Texto Legal</h1>
+    <h1> Quae magnam quas corrupti dolores commodi voluptate reprehenderit fuga beatae. </h1>
+    <h2>Por favor, hermanas Wachowski, no me metáis en la cárcel.</h2>
+  </div>
+
+  <footer>
+    <div class="navbar">
+      <div class="footer-content">
+        <p>Realizado por: Javier Martínez Martínez en 2023</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var navbarMenu = document.getElementById("navbarMenu");
+      navbarMenu.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>
