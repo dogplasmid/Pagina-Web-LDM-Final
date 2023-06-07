@@ -1,9 +1,21 @@
-body {
-  font-family: 'Ubuntu Light', sans-serif;
-  background-color: black;
-  color: rgb(16, 123, 107);
+*{
   margin: 0;
   padding: 0;
+}
+
+@font-face {
+  font-family: 'PKMN-RBYGSC';
+  src: url('/Fonts/PKMN-RBYGSC.ttf') format('truetype');
+}
+body {
+  font-family: 'PKMN-RBYGSC', sans-serif;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0); 
+  background-color: rgb(233, 233, 233);
+  color: white;
+  background-image: url("../imagenes/fondolegals.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container {
@@ -14,24 +26,14 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  background-image: url(/imagenes/fondolegal.jpg);
-background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
-  background-attachment: fixed;
   height: 100vh;
 }
-
-#cart {
-  margin-left: 30px;
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 1s ease;
 }
-
-h1, h2 {
-  text-align: center;
-  text-shadow: 2px 2px 4px rgb(18, 1, 1); 
-  max-width: 100%;
-  font-size: 24px;
-}
+/*HEADER Y FOOTER */
 
 .header {
   display: flex;
@@ -40,8 +42,8 @@ h1, h2 {
 }
 
 .navbar {
-  background-color: black;
-  padding: 15px;
+  background-color: rgba(34, 29, 29, 0.486);
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +52,7 @@ h1, h2 {
 
 .navbar-toggle {
   display: none;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   margin-right: 10px;
 }
@@ -63,15 +65,8 @@ h1, h2 {
 }
 
 .navbar-menu li {
-  margin-right: 20px;
+  margin-right: 40px;
 }
-
-footer {
-  background-color: black;
-  padding: 7.5px;
-  height: 50px;
-}
-
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -83,12 +78,8 @@ footer {
   margin: 0;
 }
 
-.navbar-content a {
-  text-decoration: none;
-}
-
 .footer-content p:first-child {
-  margin-right: 20px;
+  margin-right: 40px; 
 }
 
 .footer-content a {
@@ -96,7 +87,25 @@ footer {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+/*HEADER Y FOOTER */
+
+h1, h2 {
+  text-align: center;
+  text-shadow: 2px 2px 4px rgb(18, 1, 1); 
+  max-width: 100%;
+  font-size: 24px;
+}
+
+
+@media (max-width: 500px) {
+ 
+  body{
+    background-image: url(/imagenes/responsivelegal.jpg);
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
   .navbar-toggle {
     display: block;
   }
@@ -105,6 +114,7 @@ footer {
     display: none;
     flex-direction: row;
     align-items: center;
+    font-size: 10px;
   }
 
   .navbar-menu.active {
@@ -115,31 +125,12 @@ footer {
     margin: 0 10px;
   }
 
-  .navbar-menu li a {
-    text-decoration: none;
-    color: white;
-  }
 
+  footer {
+   font-size: 8px;
+  }
   h1, h2 {
     font-size: 18px;
   }
 }
 
-@media (min-width: 769px) {
-  .navbar-toggle {
-    display: none;
-  }
-
-  .navbar-menu {
-    display: flex;
-  }
-
-  .navbar-menu li {
-    margin: 0;
-  }
-
-  .navbar-menu li a {
-    text-decoration: none;
-    color: white;
-  }
-}
